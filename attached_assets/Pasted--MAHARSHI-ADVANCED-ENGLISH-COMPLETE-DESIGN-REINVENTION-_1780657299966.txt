@@ -1,0 +1,409 @@
+# MAHARSHI ADVANCED ENGLISH — COMPLETE DESIGN REINVENTION
+
+IMPORTANT:
+
+STOP.
+
+Do not improve the existing design.
+
+Do not modernize the existing design.
+
+Do not refactor the existing design.
+
+Do not optimize the existing design.
+
+I am not asking for a redesign.
+
+I am asking for a COMPLETE VISUAL REINVENTION.
+
+Treat the current website as a CONTENT DATABASE only.
+
+Preserve:
+
+* Business information
+* Course information
+* Testimonials
+* Contact information
+* SEO content
+* Analytics
+* Routing
+* Functionality
+
+Discard:
+
+* Layouts
+* Section structures
+* Card designs
+* Navigation design
+* Hero design
+* Spacing system
+* Typography hierarchy
+* Visual patterns
+* Component layouts
+* Current CSS architecture
+
+Everything visual must be rebuilt from first principles.
+
+---
+
+# PRIMARY OBJECTIVE
+
+Transform Maharshi Advanced English from a local coaching institute website into a premium educational brand experience.
+
+The final website should feel like:
+
+* Stripe
+* Linear
+* Vercel
+* Notion
+* Framer
+* Apple
+
+The final website must NOT feel like:
+
+* WordPress template
+* Coaching institute website
+* Bootstrap landing page
+* ThemeForest design
+* Generic React template
+* Traditional education website
+
+---
+
+# DESIGN PHILOSOPHY
+
+Minimal.
+
+Premium.
+
+Editorial.
+
+Sophisticated.
+
+Confident.
+
+Modern.
+
+Elegant.
+
+Technology-company quality.
+
+The visual experience should immediately communicate:
+
+* Trust
+* Expertise
+* Transformation
+* Authority
+* Premium quality
+
+---
+
+# COMPLETE HERO REBUILD
+
+Delete the current hero structure.
+
+Create a completely new hero experience.
+
+Requirements:
+
+* Full viewport height
+* Strong visual hierarchy
+* Premium typography
+* Powerful storytelling
+* Large editorial layout
+* Trust indicators integrated naturally
+* Sophisticated animations
+
+The hero should communicate:
+
+10,000+ Students
+
+25+ Years Experience
+
+98% Satisfaction
+
+5,000+ Job Placements
+
+without looking crowded.
+
+The hero should be the strongest section on the website.
+
+Benchmark:
+
+Stripe homepage quality.
+
+---
+
+# VISUAL SYSTEM
+
+Create a premium design system.
+
+Typography:
+
+* DM Sans
+* Inter
+
+Use large typography.
+
+Large whitespace.
+
+Large visual rhythm.
+
+No cramped layouts.
+
+No small cards.
+
+No tiny sections.
+
+Content should breathe.
+
+---
+
+# SECTION REDESIGN RULE
+
+Every section must use a unique layout.
+
+Forbidden:
+
+Card grid.
+
+Card grid.
+
+Card grid.
+
+Card grid.
+
+Card grid.
+
+The website currently feels repetitive.
+
+Instead use:
+
+* Editorial split layouts
+* Bento layouts
+* Storytelling sections
+* Mosaic image layouts
+* Magazine-inspired layouts
+* Timeline layouts
+* Spotlight sections
+* Feature narratives
+* Interactive comparison sections
+* Premium testimonial compositions
+
+No two adjacent sections may look similar.
+
+---
+
+# HOMEPAGE REDESIGN
+
+Completely rebuild:
+
+Hero
+
+Social Proof
+
+Why Choose Us
+
+Courses
+
+Gallery
+
+Journey Timeline
+
+Testimonials
+
+Blog
+
+FAQ
+
+CTA
+
+Every section should feel unique.
+
+Every section should feel intentionally designed.
+
+Every section should feel agency quality.
+
+---
+
+# COURSES PAGE REDESIGN
+
+Do not use standard course cards.
+
+Create premium course experiences.
+
+Each course should feel like a product page.
+
+Use:
+
+* Visual storytelling
+* Learning outcomes
+* Results
+* Transformation journey
+* Professional layouts
+
+Benchmark:
+
+Modern SaaS pricing and product pages.
+
+---
+
+# ABOUT PAGE REDESIGN
+
+Tell a story.
+
+Do not present information.
+
+Create narrative flow.
+
+Make visitors emotionally connect with:
+
+* Founder
+* Mission
+* Students
+* Impact
+
+---
+
+# SUCCESS STORIES REDESIGN
+
+Avoid simple testimonial grids.
+
+Create:
+
+* Transformation stories
+* Career outcomes
+* Before vs after experiences
+* Premium review layouts
+
+Make results feel real and inspiring.
+
+---
+
+# CONTACT PAGE REDESIGN
+
+Transform into a conversion page.
+
+Primary goal:
+
+Generate leads.
+
+Every element should encourage:
+
+* WhatsApp inquiry
+* Phone call
+* Free demo booking
+
+---
+
+# NAVBAR REBUILD
+
+Delete current navigation design.
+
+Create:
+
+* Premium sticky navbar
+* Elegant transitions
+* Professional spacing
+* Refined hover states
+* World-class mobile menu
+
+Benchmark:
+
+Linear navigation.
+
+---
+
+# FOOTER REBUILD
+
+Premium dark footer.
+
+Large spacing.
+
+Strong hierarchy.
+
+Modern SaaS style.
+
+Benchmark:
+
+Stripe footer.
+
+---
+
+# ANIMATION SYSTEM
+
+Current animations must be replaced.
+
+Use:
+
+* Smooth reveal animations
+* Elegant parallax
+* Sophisticated hover effects
+* Premium micro-interactions
+* Editorial transitions
+
+Avoid:
+
+* Flashy effects
+* Excessive glow
+* Gimmicks
+* Heavy motion
+
+Every animation should feel purposeful.
+
+---
+
+# COLOR USAGE
+
+Use color with restraint.
+
+95% of the website should rely on:
+
+* White
+* Soft gray
+* Near black
+* Indigo
+
+Accent colors only where attention is required.
+
+No gradient overload.
+
+No excessive shadows.
+
+No visual noise.
+
+---
+
+# FINAL QUALITY TEST
+
+Before finalizing any page ask:
+
+Would this look out of place on:
+
+* Stripe
+* Linear
+* Vercel
+* Notion
+* Framer
+
+If yes:
+
+Redesign it.
+
+---
+
+# FINAL SUCCESS CRITERIA
+
+A visitor should think:
+
+"This looks like a premium technology company."
+
+NOT
+
+"This looks like an English coaching institute."
+
+The final design should be portfolio-worthy, agency-quality, visually distinctive, conversion-focused, and significantly superior to the current implementation.
+
+Do not preserve any existing layout patterns.
+
+Reimagine the entire visual experience from scratch.
