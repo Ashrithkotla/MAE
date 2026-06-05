@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import ScrollToTop from "@/components/ScrollToTop";
 import Home from "@/pages/Home";
 import Courses from "@/pages/Courses";
 import CourseDetail from "@/pages/CourseDetail";
@@ -24,6 +25,7 @@ const queryClient = new QueryClient();
 function Router() {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <Switch>
         <Route path="/" component={Home} />

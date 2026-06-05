@@ -4,9 +4,6 @@ import { ArrowLeft, ArrowRight, Check, Clock, Users, Wifi, BarChart } from "luci
 import { FaWhatsapp } from "react-icons/fa";
 import { courses } from "../data/courses";
 
-const fadeUp = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } };
-const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.08 } } };
-
 const curriculum: Record<string, { week: string; title: string; desc: string }[]> = {
   "spoken-english": [
     { week: "Week 1–2", title: "Breaking the Ice & Basics", desc: "Introductory vocabulary, structural basics, simple conversational frames, and everyday greetings." },
@@ -33,23 +30,23 @@ const curriculum: Record<string, { week: string; title: string; desc: string }[]
   ],
 };
 
-const courseMeta: Record<string, { batchSize: string; mode: string; level: string; timings: string }> = {
-  "spoken-english": { batchSize: "Max 20 Students", mode: "Offline & Online", level: "Beginner to Advanced", timings: "8 AM – 10 PM" },
-  "grammar-mastery": { batchSize: "Max 20 Students", mode: "Offline & Online", level: "Beginner to Advanced", timings: "8 AM – 10 PM" },
-  "professional-english": { batchSize: "Max 15 Students", mode: "Offline & Online", level: "Intermediate to Advanced", timings: "8 AM – 10 PM" },
-  "interview-prep": { batchSize: "Max 15 Students", mode: "Offline & Online", level: "All Levels", timings: "8 AM – 10 PM" },
+const courseMeta: Record<string, { batchSize: string; mode: string; level: string }> = {
+  "spoken-english": { batchSize: "Max 20 Students", mode: "Offline & Online", level: "Beginner to Advanced" },
+  "grammar-mastery": { batchSize: "Max 20 Students", mode: "Offline & Online", level: "Beginner to Advanced" },
+  "professional-english": { batchSize: "Max 15 Students", mode: "Offline & Online", level: "Intermediate to Advanced" },
+  "interview-prep": { batchSize: "Max 15 Students", mode: "Offline & Online", level: "All Levels" },
 };
 
 export default function CourseDetail() {
   const params = useParams<{ slug: string }>();
   const slug = params.slug;
-  const course = courses.find((c) => c.slug === slug);
+  const course = courses.find(c => c.slug === slug);
 
   if (!course) {
     return (
       <main className="min-h-screen flex items-center justify-center pt-20">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">Course not found</h1>
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Course not found</h1>
           <Link href="/courses" className="text-primary hover:underline">Back to Courses</Link>
         </div>
       </main>
@@ -57,61 +54,34 @@ export default function CourseDetail() {
   }
 
   const weeks = curriculum[slug] || [];
-  const meta = courseMeta[slug] || { batchSize: "Max 20", mode: "Offline & Online", level: "All Levels", timings: "8 AM – 10 PM" };
+  const meta = courseMeta[slug] || { batchSize: "Max 20", mode: "Offline & Online", level: "All Levels" };
 
   return (
     <main data-testid="course-detail-page" className="min-h-screen">
-      {/* Header */}
-      <section className="pt-24 pb-16 bg-white border-b border-gray-100">
+      <section className="pt-24 pb-16 bg-white dark:bg-gray-950 border-b border-gray-100 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <Link href="/courses" className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 mb-8 transition-colors" data-testid="course-back">
+            <Link href="/courses" className="inline-flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white mb-8 transition-colors" data-testid="course-back">
               <ArrowLeft size={14} /> All Programs
             </Link>
             <div className="grid lg:grid-cols-3 gap-12 items-start">
               <div className="lg:col-span-2">
-                <span className="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-lg bg-primary/10 text-primary mb-5">
-                  {course.duration}
-                </span>
-                <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">{course.title}</h1>
-                <p className="text-xl italic text-gray-500 mb-6">{course.tagline}</p>
-                <p className="text-gray-600 leading-relaxed text-lg">{course.description}</p>
+                <span className="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-lg bg-primary/10 text-primary mb-5">{course.duration}</span>
+                <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">{course.title}</h1>
+                <p className="text-xl italic text-gray-500 dark:text-gray-400 mb-6">{course.tagline}</p>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">{course.description}</p>
               </div>
-
-              {/* Sticky enrollment card */}
-              <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+              <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
                 <div className="space-y-3 mb-6 text-sm">
-                  <div className="flex items-center gap-3 text-gray-600">
-                    <Clock size={15} className="text-gray-400" />
-                    <span><strong>Duration:</strong> {course.duration}</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-600">
-                    <Users size={15} className="text-gray-400" />
-                    <span><strong>Batch Size:</strong> {meta.batchSize}</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-600">
-                    <Wifi size={15} className="text-gray-400" />
-                    <span><strong>Mode:</strong> {meta.mode}</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-600">
-                    <BarChart size={15} className="text-gray-400" />
-                    <span><strong>Level:</strong> {meta.level}</span>
-                  </div>
+                  <div className="flex items-center gap-3 text-gray-600 dark:text-gray-300"><Clock size={15} className="text-gray-400" /><span><strong>Duration:</strong> {course.duration}</span></div>
+                  <div className="flex items-center gap-3 text-gray-600 dark:text-gray-300"><Users size={15} className="text-gray-400" /><span><strong>Batch Size:</strong> {meta.batchSize}</span></div>
+                  <div className="flex items-center gap-3 text-gray-600 dark:text-gray-300"><Wifi size={15} className="text-gray-400" /><span><strong>Mode:</strong> {meta.mode}</span></div>
+                  <div className="flex items-center gap-3 text-gray-600 dark:text-gray-300"><BarChart size={15} className="text-gray-400" /><span><strong>Level:</strong> {meta.level}</span></div>
                 </div>
-                <a
-                  href="https://wa.me/917286066661?text=Hi! I want to enroll in the course."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full py-3.5 bg-primary text-white font-semibold rounded-xl hover:bg-primary/90 transition-colors mb-3"
-                  data-testid="course-enroll-whatsapp"
-                >
+                <a href="https://wa.me/917286066661?text=Hi! I want to enroll in the course." target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full py-3.5 bg-primary text-white font-semibold rounded-xl hover:bg-primary/90 transition-colors mb-3" data-testid="course-enroll-whatsapp">
                   <FaWhatsapp size={15} /> Enquire on WhatsApp
                 </a>
-                <a
-                  href="tel:+917286066661"
-                  className="flex items-center justify-center gap-2 w-full py-3.5 border border-gray-200 text-gray-700 font-medium rounded-xl hover:bg-gray-50 transition-colors text-sm"
-                  data-testid="course-enroll-call"
-                >
+                <a href="tel:+917286066661" className="flex items-center justify-center gap-2 w-full py-3.5 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-medium rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-sm" data-testid="course-enroll-call">
                   Call +91 7286 066 661
                 </a>
               </div>
@@ -120,16 +90,15 @@ export default function CourseDetail() {
         </div>
       </section>
 
-      {/* What You'll Learn */}
-      <section className="py-16 bg-gray-50/50">
+      <section className="py-16 bg-gray-50/50 dark:bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-            <h2 className="text-2xl font-bold text-gray-900 mb-8">What you will learn</h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">What you will learn</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {course.features.map((f) => (
-                <div key={f} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-gray-100" data-testid={`course-feature-${f.toLowerCase().replace(/\s+/g, "-")}`}>
+              {course.features.map(f => (
+                <div key={f} className="flex items-start gap-3 bg-white dark:bg-gray-900 rounded-xl p-4 border border-gray-100 dark:border-gray-800">
                   <Check size={16} className="text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-sm text-gray-700">{f}</span>
+                  <span className="text-sm text-gray-700 dark:text-gray-300">{f}</span>
                 </div>
               ))}
             </div>
@@ -137,19 +106,18 @@ export default function CourseDetail() {
         </div>
       </section>
 
-      {/* Curriculum */}
       {weeks.length > 0 && (
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-white dark:bg-gray-950">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-              <h2 className="text-2xl font-bold text-gray-900 mb-8">Course curriculum</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Course curriculum</h2>
               <div className="space-y-4">
                 {weeks.map((w, i) => (
-                  <div key={i} className="flex gap-6 p-6 rounded-2xl bg-gray-50 border border-gray-100" data-testid={`curriculum-week-${i + 1}`}>
+                  <div key={i} className="flex gap-6 p-6 rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800" data-testid={`curriculum-week-${i + 1}`}>
                     <div className="flex-shrink-0 w-24 text-xs font-bold uppercase tracking-wide text-primary">{w.week}</div>
                     <div>
-                      <div className="font-semibold text-gray-900 mb-1">{w.title}</div>
-                      <div className="text-sm text-gray-500">{w.desc}</div>
+                      <div className="font-semibold text-gray-900 dark:text-white mb-1">{w.title}</div>
+                      <div className="text-sm text-gray-500 dark:text-gray-400">{w.desc}</div>
                     </div>
                   </div>
                 ))}
@@ -159,7 +127,6 @@ export default function CourseDetail() {
         </section>
       )}
 
-      {/* CTA */}
       <section className="py-16 bg-primary">
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to enroll in {course.title}?</h2>
