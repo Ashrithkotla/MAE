@@ -46,11 +46,11 @@ export default function Navbar() {
 
             {/* Logo */}
             <Link href="/" className="flex items-center flex-shrink-0">
-              <div className={`rounded-lg transition-all flex items-center ${dark ? "bg-white px-2 py-1" : ""}`}>
+              <div className="rounded-lg transition-all flex items-center overflow-hidden">
                 <img
                   src={logoImg}
                   alt="Maharshi Advanced English"
-                  className="h-9 w-auto object-contain"
+                  className="h-10 w-auto object-contain"
                   style={{ mixBlendMode: dark ? "normal" : "multiply" }}
                 />
               </div>
@@ -100,7 +100,7 @@ export default function Navbar() {
           <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setOpen(false)} />
           <div className="absolute right-0 top-0 bottom-0 w-[280px] sm:w-[320px] bg-white dark:bg-gray-950 shadow-2xl flex flex-col border-l border-gray-200 dark:border-gray-800">
             <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100 dark:border-gray-800">
-              <div className={`rounded-lg ${dark ? "bg-white px-2 py-1" : ""}`}>
+              <div className="rounded-lg overflow-hidden">
                 <img src={logoImg} alt="Maharshi Advanced English" className="h-8 w-auto object-contain"
                   style={{ mixBlendMode: dark ? "normal" : "multiply" }} />
               </div>

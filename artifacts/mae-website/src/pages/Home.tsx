@@ -142,7 +142,7 @@ export default function Home() {
               </motion.div>
 
               <h1 className="font-bold text-gray-900 dark:text-white leading-[1.05] tracking-tight mb-5 sm:mb-6">
-                <span className="block text-[40px] sm:text-5xl lg:text-6xl xl:text-[70px]">English fluency</span>
+                <span className="block text-[40px] sm:text-5xl lg:text-6xl xl:text-[70px]">English Fluency</span>
                 <span className="block text-[40px] sm:text-5xl lg:text-6xl xl:text-[70px] relative">
                   <span className="text-primary relative">
                     that changes
@@ -435,7 +435,7 @@ export default function Home() {
                   Ramesh Maharshi —<br />25 years, 10,000+ lives.
                 </h2>
                 <p className="text-gray-400 leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base">
-                  In 2004, Ramesh Maharshi opened with one room and one conviction: English fluency should not be a privilege for the few. Today, more than 10,000 students call him the teacher who changed their life. He still teaches personally.
+                  In 2004, Ramesh Maharshi opened with one room and one conviction: English Fluency should not be a privilege for the few. Today, more than 10,000 students call him the teacher who changed their life. He still teaches personally.
                 </p>
                 <div className="flex flex-wrap gap-6 sm:gap-8 mb-6 sm:mb-8">
                   {[["10,000+", "Students Trained"], ["5,000+", "Placements"], ["25+", "Years of Teaching"]].map(([num, label]) => (
