@@ -1,0 +1,6 @@
+{
+  "buildCommand": "PORT=5173 BASE_PATH=/ corepack pnpm --dir artifacts/mae-website run build",
+  "outputDirectory": "artifacts/mae-website/dist/public",
+  "installCommand": "corepack pnpm install",
+  "framework": "vite"
+}
