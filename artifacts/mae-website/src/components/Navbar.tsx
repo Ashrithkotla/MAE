@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Menu, X, Sun, Moon, Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { useTheme } from "../hooks/useTheme";
-import logoImg from "../assets/logo-new.png";
+import logoImg from "../assets/logo.png";
 
 const navLinks = [
   { href: "/", label: "Home" },
