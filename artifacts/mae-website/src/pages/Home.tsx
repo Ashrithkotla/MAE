@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { Link } from "wouter";
 import { motion, useInView, useAnimationFrame, useMotionValue } from "framer-motion";
+import type { Variants } from "framer-motion";
 import { ArrowRight, ChevronDown, Phone, Star, Users, Award, TrendingUp, CheckCircle2, Calendar, Clock, MapPin } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import AnimatedCounter from "../components/AnimatedCounter";
@@ -15,8 +16,8 @@ import img5 from "../assets/img5.jpg";
 import trainerImg from "../assets/trianer1.png";
 import summerImg from "../assets/MAE SUMMER CLASSES.jpeg";
 
-const fadeUp = { hidden: { opacity: 0, y: 28 }, visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: "easeOut" } } };
-const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.1 } } };
+const fadeUp: Variants = { hidden: { opacity: 0, y: 28 }, visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: "easeOut" } } };
+const stagger: Variants = { hidden: {}, visible: { transition: { staggerChildren: 0.1 } } };
 
 function Reveal({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null);
