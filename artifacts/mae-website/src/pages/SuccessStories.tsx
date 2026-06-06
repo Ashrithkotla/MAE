@@ -35,23 +35,23 @@ export default function SuccessStories() {
     <main data-testid="success-stories-page" className="min-h-screen">
 
       {/* Hero — dark cinematic */}
-      <section className="relative pt-28 pb-24 bg-gray-950 text-white overflow-hidden">
+      <section className="relative pt-24 pb-12 sm:pb-16 lg:pb-24 bg-gray-950 text-white overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(79,70,229,0.25),transparent_65%)]" />
         <div className="absolute inset-0" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
           <motion.div initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <div className="text-xs font-bold text-primary/80 uppercase tracking-widest mb-4">Success Stories</div>
-            <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-[1.05] max-w-3xl tracking-tight">
+            <h1 className="text-[38px] sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-5 sm:mb-6 leading-[1.05] max-w-3xl tracking-tight">
               Real people.<br />Real results.<br /><span className="text-primary">Real English.</span>
             </h1>
-            <p className="text-lg text-gray-400 max-w-xl leading-relaxed">Every student you read about below was once exactly where you are — hesitant, unsure, and held back by English. They took one step. You can too.</p>
+            <p className="text-base sm:text-lg text-gray-400 max-w-xl leading-relaxed">Every student you read about below was once exactly where you are — hesitant, unsure, and held back by English. They took one step. You can too.</p>
           </motion.div>
         </div>
       </section>
 
       {/* Outcome stats */}
-      <Reveal className="py-16 bg-white dark:bg-gray-950 border-b border-gray-100 dark:border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <Reveal className="py-10 sm:py-14 lg:py-16 bg-white dark:bg-gray-950 border-b border-gray-100 dark:border-gray-800">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           <motion.div variants={stagger} className="grid grid-cols-2 lg:grid-cols-4 gap-5">
             {outcomes.map((o, i) => {
               const Icon = o.icon;
@@ -72,11 +72,11 @@ export default function SuccessStories() {
       </Reveal>
 
       {/* Testimonial cards */}
-      <Reveal className="py-24 bg-white dark:bg-gray-950">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div variants={fadeUp} className="mb-14">
+      <Reveal className="py-12 sm:py-16 lg:py-24 bg-white dark:bg-gray-950">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+          <motion.div variants={fadeUp} className="mb-10 sm:mb-14">
             <div className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Student Stories</div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white max-w-xl leading-tight">Words from those who transformed.</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white max-w-xl leading-tight">Words from those who transformed.</h2>
           </motion.div>
           <motion.div variants={stagger} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {testimonials.map((t, i) => (
@@ -105,11 +105,11 @@ export default function SuccessStories() {
       </Reveal>
 
       {/* Before / After */}
-      <Reveal className="py-24 bg-gray-50 dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div variants={fadeUp} className="text-center mb-14">
+      <Reveal className="py-12 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+          <motion.div variants={fadeUp} className="text-center mb-10 sm:mb-14">
             <div className="text-xs font-bold text-primary uppercase tracking-widest mb-3">The Transformation</div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">Before and after Maharshi.</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">Before and after Maharshi.</h2>
             <p className="text-gray-500 dark:text-gray-400 max-w-lg mx-auto">The difference our students experience is not subtle — it is complete.</p>
           </motion.div>
           <motion.div variants={stagger} className="grid grid-cols-1 md:grid-cols-2 gap-4">

@@ -53,13 +53,13 @@ export default function FAQ() {
     <main data-testid="faq-page" className="min-h-screen">
 
       {/* Hero */}
-      <section className="relative pt-28 pb-20 bg-white dark:bg-gray-950 overflow-hidden border-b border-gray-100 dark:border-gray-800">
+      <section className="relative pt-24 pb-10 sm:pb-14 lg:pb-20 bg-white dark:bg-gray-950 overflow-hidden border-b border-gray-100 dark:border-gray-800">
         <div className="absolute -top-40 right-0 w-[500px] h-[500px] bg-primary/5 dark:bg-primary/8 rounded-full blur-3xl pointer-events-none" />
-        <div className="max-w-3xl mx-auto px-6 lg:px-8 relative z-10">
+        <div className="max-w-3xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
           <motion.div initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <div className="text-xs font-bold text-primary uppercase tracking-widest mb-4">FAQ</div>
-            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">Frequently asked<br /><span className="text-primary">questions.</span></h1>
-            <p className="text-lg text-gray-500 dark:text-gray-400 leading-relaxed">Everything you need to know before making your decision. Can't find an answer? Just ask us directly.</p>
+            <h1 className="text-[38px] sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-5 sm:mb-6 leading-tight">Frequently asked<br /><span className="text-primary">questions.</span></h1>
+            <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400 leading-relaxed">Everything you need to know before making your decision. Can't find an answer? Just ask us directly.</p>
           </motion.div>
         </div>
       </section>
@@ -89,8 +89,8 @@ export default function FAQ() {
       </div>
 
       {/* FAQ groups */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-900/50">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8 space-y-10">
+      <section className="py-10 sm:py-14 lg:py-16 bg-gray-50 dark:bg-gray-900/50">
+        <div className="max-w-3xl mx-auto px-5 sm:px-6 lg:px-8 space-y-8 sm:space-y-10">
           {displayCategories.map(cat => {
             const items = faqs.filter(f => f.category === cat);
             const colorCls = categoryColors[cat] || "text-primary bg-primary/10";
@@ -112,8 +112,8 @@ export default function FAQ() {
       </section>
 
       {/* Still have questions */}
-      <section className="py-20 bg-white dark:bg-gray-950 border-t border-gray-100 dark:border-gray-800">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-gray-950 border-t border-gray-100 dark:border-gray-800">
+        <div className="max-w-3xl mx-auto px-5 sm:px-6 lg:px-8">
           <Reveal>
             <motion.div variants={fadeUp} className="rounded-3xl bg-gray-950 dark:bg-gray-900 p-10 lg:p-12 text-center relative overflow-hidden">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(79,70,229,0.2),transparent_65%)]" />

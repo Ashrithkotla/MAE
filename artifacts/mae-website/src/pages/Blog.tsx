@@ -23,23 +23,23 @@ export default function Blog() {
     <main data-testid="blog-page" className="min-h-screen">
 
       {/* Hero */}
-      <section className="relative pt-28 pb-20 bg-white dark:bg-gray-950 overflow-hidden border-b border-gray-100 dark:border-gray-800">
+      <section className="relative pt-24 pb-10 sm:pb-14 lg:pb-20 bg-white dark:bg-gray-950 overflow-hidden border-b border-gray-100 dark:border-gray-800">
         <div className="absolute -top-32 -left-32 w-[500px] h-[500px] bg-primary/5 dark:bg-primary/8 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-violet-500/4 rounded-full blur-3xl pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
           <motion.div initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <div className="text-xs font-bold text-primary uppercase tracking-widest mb-4">The Blog</div>
-            <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-[1.05] max-w-3xl tracking-tight">
+            <h1 className="text-[38px] sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 dark:text-white mb-5 sm:mb-6 leading-[1.05] max-w-3xl tracking-tight">
               English insights.<br /><span className="text-primary">Practical tips.</span><br />Real guidance.
             </h1>
-            <p className="text-lg text-gray-500 dark:text-gray-400 max-w-xl leading-relaxed">Articles written by Ramesh Maharshi to help you improve your English — one concept at a time.</p>
+            <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400 max-w-xl leading-relaxed">Articles written by Ramesh Maharshi to help you improve your English — one concept at a time.</p>
           </motion.div>
         </div>
       </section>
 
       {/* Featured post */}
-      <Reveal className="pt-16 pb-0 bg-white dark:bg-gray-950">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <Reveal className="pt-10 sm:pt-14 lg:pt-16 pb-0 bg-white dark:bg-gray-950">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           <motion.div variants={fadeUp} data-testid="blog-featured">
             <Link href={`/blog/${blogPosts[0].slug}`} className="group block">
               <div className="grid lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-gray-100 dark:border-gray-800 hover:shadow-2xl transition-shadow">
@@ -66,8 +66,8 @@ export default function Blog() {
       </Reveal>
 
       {/* Filter bar + grid */}
-      <Reveal className="py-16 bg-white dark:bg-gray-950">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <Reveal className="py-10 sm:py-14 lg:py-16 bg-white dark:bg-gray-950">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           {/* Category pills */}
           <motion.div variants={fadeUp} className="flex flex-wrap gap-2 mb-12">
             {categories.map(cat => (

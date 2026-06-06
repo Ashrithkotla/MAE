@@ -49,23 +49,23 @@ export default function Courses() {
     <main data-testid="courses-page" className="min-h-screen">
 
       {/* Hero */}
-      <section className="relative pt-28 pb-20 bg-white dark:bg-gray-950 overflow-hidden border-b border-gray-100 dark:border-gray-800">
+      <section className="relative pt-24 pb-10 sm:pb-14 lg:pb-20 bg-white dark:bg-gray-950 overflow-hidden border-b border-gray-100 dark:border-gray-800">
         <div className="absolute -top-32 -right-32 w-[500px] h-[500px] bg-primary/6 dark:bg-primary/8 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-violet-500/5 dark:bg-violet-500/8 rounded-full blur-3xl pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
           <motion.div initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <div className="text-xs font-bold text-primary uppercase tracking-widest mb-4">All Programs</div>
-            <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-[1.05] max-w-3xl tracking-tight">
+            <h1 className="text-[38px] sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 dark:text-white mb-5 sm:mb-6 leading-[1.05] max-w-3xl tracking-tight">
               Find the program<br /><span className="text-primary">that fits your goal.</span>
             </h1>
-            <p className="text-lg text-gray-500 dark:text-gray-400 max-w-xl leading-relaxed">Four specialized programs. Every one designed to deliver a specific, measurable outcome — not just grammar rules.</p>
+            <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400 max-w-xl leading-relaxed">Four specialized programs. Every one designed to deliver a specific, measurable outcome — not just grammar rules.</p>
           </motion.div>
         </div>
       </section>
 
       {/* Course cards */}
-      <Reveal className="py-20 bg-white dark:bg-gray-950">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <Reveal className="py-10 sm:py-14 lg:py-20 bg-white dark:bg-gray-950">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           <motion.div variants={stagger} className="space-y-6">
             {courses.map((course, i) => {
               const meta = courseMeta[course.slug] || { batchSize: "Max 20 Students", level: "All Levels", outcomes: [] };
@@ -146,7 +146,7 @@ export default function Courses() {
       </Reveal>
 
       {/* Bottom CTA */}
-      <section className="py-20 bg-gray-950 relative overflow-hidden">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gray-950 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(79,70,229,0.2),transparent_60%)]" />
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center relative z-10">
           <div className="text-xs font-bold text-primary/80 uppercase tracking-widest mb-4">Not Sure?</div>

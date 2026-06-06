@@ -46,22 +46,22 @@ export default function About() {
     <main data-testid="about-page" className="min-h-screen">
 
       {/* Hero */}
-      <section className="relative pt-28 pb-20 bg-white dark:bg-gray-950 overflow-hidden border-b border-gray-100 dark:border-gray-800">
+      <section className="relative pt-24 pb-10 sm:pb-16 lg:pb-20 bg-white dark:bg-gray-950 overflow-hidden border-b border-gray-100 dark:border-gray-800">
         <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-primary/6 dark:bg-primary/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-amber-500/4 rounded-full blur-3xl pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
           <motion.div initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}
-            className="grid lg:grid-cols-2 gap-16 items-center">
+            className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div>
               <div className="text-xs font-bold text-primary uppercase tracking-widest mb-4">Our Story</div>
-              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-[1.05] tracking-tight">
+              <h1 className="text-[38px] sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 dark:text-white mb-5 sm:mb-6 leading-[1.05] tracking-tight">
                 25 years of<br /><span className="text-primary">transforming lives.</span>
               </h1>
-              <p className="text-lg text-gray-500 dark:text-gray-400 leading-relaxed mb-10">
+              <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400 leading-relaxed mb-8 sm:mb-10">
                 Maharshi Advanced English is not a classroom. It is a launchpad. Since 2004, our founder Ramesh Maharshi has personally guided over 10,000 students from hesitation to complete fluency.
               </p>
               <Link href="/contact"
-                className="inline-flex items-center gap-2 px-7 py-4 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-all hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-all hover:shadow-lg hover:shadow-primary/25 w-full sm:w-auto"
                 data-testid="about-cta">
                 Join the Journey <ArrowRight size={15} />
               </Link>
@@ -102,9 +102,9 @@ export default function About() {
       </section>
 
       {/* Founder story */}
-      <Reveal className="py-24 bg-white dark:bg-gray-950">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <Reveal className="py-14 sm:py-20 lg:py-24 bg-white dark:bg-gray-950">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <motion.div variants={fadeUp}>
               <div className="text-xs font-bold text-primary uppercase tracking-widest mb-4">The Founder</div>
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-8 leading-tight">A teacher who believed English could change destinies.</h2>
@@ -129,8 +129,8 @@ export default function About() {
       </Reveal>
 
       {/* Timeline */}
-      <Reveal className="py-24 bg-gray-50 dark:bg-gray-900">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+      <Reveal className="py-14 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-900">
+        <div className="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8">
           <motion.div variants={fadeUp} className="text-center mb-16">
             <div className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Our Journey</div>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">Two decades of milestones.</h2>
@@ -158,11 +158,11 @@ export default function About() {
       </Reveal>
 
       {/* Mission */}
-      <Reveal className="py-24 bg-white dark:bg-gray-950">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div variants={fadeUp} className="mb-12">
+      <Reveal className="py-14 sm:py-20 lg:py-24 bg-white dark:bg-gray-950">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+          <motion.div variants={fadeUp} className="mb-10 sm:mb-12">
             <div className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Our Mission</div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white max-w-xl leading-tight">What we stand for.</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white max-w-xl leading-tight">What we stand for.</h2>
           </motion.div>
           <motion.div variants={stagger} className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {missions.map((m, i) => (
